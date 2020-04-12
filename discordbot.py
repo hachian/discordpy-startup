@@ -21,7 +21,8 @@ async def ping(ctx):
 
 @bot.command()
 async def dice(ctx):
-    await ctx.send(f"random.randint(1, 6)")
+    roll = random.randint(1, 6)
+    await ctx.send("{}".format(roll))
 
 
 bot.run(token)
