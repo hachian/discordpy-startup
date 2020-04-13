@@ -12,7 +12,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready(ctx):
-    ctx.send("Wah gwaan!")
+    await ctx.send("Wah gwaan!")
 
     
 @bot.event
