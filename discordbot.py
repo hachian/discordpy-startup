@@ -2,12 +2,19 @@ import os
 import traceback
 import random
 
+import discord
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+client = discord.Client()
 
 
+@client.event
+async def on_ready():
+    print("Wah gwaan!")
+
+    
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
