@@ -11,8 +11,9 @@ client = discord.Client()
 
 
 @client.event
-async def on_ready(ctx):
-    await ctx.send("Wah gwaan!")
+async def on_ready():
+    hard_coded_channel = discord.Object(id="638744494610841603")
+    yield from client.send_message(hard_coded_channel, "Wah gwaan!")
 
     
 @bot.event
