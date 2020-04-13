@@ -36,8 +36,7 @@ async def dice(ctx):
 @bot.command()
 async def debug(ctx):
     dbgmsg = "this is debug message."
-    ctx.send(f"{dbgmsg}")
-    await ctx.send("{}".format(roll))
+    await ctx.send(f"{dbgmsg}")
 
 
 bot.run(token)
