@@ -12,7 +12,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    ch = client.get_channel('638744494610841603')
+    ch = client.get_channel(638744494610841603)
     await ch.send("Wah Gwaan!")
 
     
