@@ -11,7 +11,7 @@ client = discord.Client()
 
 
 @client.event
-async def on_ready():
+async def on_ready(ctx):
     ctx.send("Wah gwaan!")
 
     
@@ -30,7 +30,7 @@ async def ping(ctx):
 @bot.command()
 async def dice(ctx):
     roll = random.randint(1, 6)
-    await ctx.send("{}".format(roll))
+    await ctx.send(f"{roll}")
 
 
 @bot.command()
