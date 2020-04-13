@@ -1,10 +1,10 @@
-from discord.ext import commands
+import discord
 import os
 import traceback
 import random
 
 client = discord.Client()
-bot = commands.Bot(command_prefix='/')
+bot = discord.ext.commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
