@@ -12,8 +12,8 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    ch = client.get_channel(638744494610841603)
-    await ch.send("Wah Gwaan!")
+    for channel in client.get_all_channels():
+        await channel.send("Wah Gwaan!")
 
     
 @bot.event
