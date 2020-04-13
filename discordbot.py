@@ -12,8 +12,8 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    hard_coded_channel = discord.Object(id="638744494610841603")
-    yield from client.send_message(hard_coded_channel, "Wah gwaan!")
+    ch = client.get_channel('638744494610841603')
+    await ch.send("Wah Gwaan!")
 
     
 @bot.event
@@ -36,7 +36,7 @@ async def dice(ctx):
 
 @bot.command()
 async def debug(ctx):
-    dbgmsg = "this is debug message."
+    dbgmsg = "this is debug message!!"
     await ctx.send(f"{dbgmsg}")
 
 
